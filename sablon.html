@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raport Zilnic Angajat</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 24px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        td {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Raport Zilnic Angajat</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nume Angajat</th>
+                <th>Funcția</th>
+                <th>Data</th>
+                <th>Ore Lucrate</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each inregistrari}}
+            <tr>
+                <td>{{nume_angajat}}</td>
+                <td>{{functie}}</td>
+                <td>{{data}}</td>
+                <td>{{ore_lucrate}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</body>
+</html>
